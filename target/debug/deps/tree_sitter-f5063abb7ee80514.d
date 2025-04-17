@@ -1,9 +1,0 @@
-C:\Dev\tree-sitter-int-main\target\debug\deps\libtree_sitter-f5063abb7ee80514.rmeta: C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\lib.rs C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\ffi.rs C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\util.rs C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\./bindings.rs C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\../include/tree_sitter/parser.h
-
-C:\Dev\tree-sitter-int-main\target\debug\deps\tree_sitter-f5063abb7ee80514.d: C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\lib.rs C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\ffi.rs C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\util.rs C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\./bindings.rs C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\../include/tree_sitter/parser.h
-
-C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\lib.rs:
-C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\ffi.rs:
-C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\util.rs:
-C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\./bindings.rs:
-C:\Users\Cameron\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tree-sitter-0.20.10\binding_rust\../include/tree_sitter/parser.h:
