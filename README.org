@@ -87,12 +87,12 @@ Otherwise, if this is the only extra load path needed, use ~setq~.
 #+end_src
 
 Then navigate to a buffer containing Aly source code and try
-~treesit-explore-mode~. When it asks for a language, input ~int~ (short
+~treesit-explore-mode~. When it asks for a language, input ~aly~ (short
 for =Aly=). A new buffer will open containing the AST for the
 contents of the buffer---or, at least, the grammar's current best
 approximation of it. You can even navigate through it, highlight
 different portions, etc. Very educational!
 
-In the Aly repository, you will find a =int-ts-mode.el= in the
+In the Aly repository, you will find a =aly-ts-mode.el= in the
 editor subdirectory which can be loaded and subsequently used for
 tree-sitter based syntax highlighting.
