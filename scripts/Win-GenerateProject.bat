@@ -1,6 +1,8 @@
 @echo off
 setlocal
 
+cd ../
+
 :: Define build directory
 set BUILD_DIR=bld
 
