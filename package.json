@@ -1,0 +1,38 @@
+{
+    "name": "tree-sitter-int",
+    "version": "3.3.3",
+    "description": "Tree sitter parser for Aly",
+    "main": "bindings/node",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "NorthernL1ghts",
+    "license": "MIT",
+    "devDependencies": {
+      "tree-sitter-cli": "^0.20.8"
+    },
+    "tree-sitter": [
+      {
+        "scope": "source.int",
+        "file-types": [
+          "int"
+        ]
+      }
+    ],
+    "gypfile": true,
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/NorthernL1ghts/tree-sitter-int.git"
+    },
+    "keywords": [
+      "tree-sitter",
+      "parser",
+      "Aly",
+      "grammar"
+    ],
+    "bugs": {
+      "url": "https://github.com/NorthernL1ghts/tree-sitter-int/issues"
+    },
+    "homepage": "https://github.com/NorthernL1ghts/tree-sitter-int#readme"
+  }
+  

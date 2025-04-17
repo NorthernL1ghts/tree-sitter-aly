@@ -1,0 +1,98 @@
+#+title: Aly Tree Sitter Parser
+#+author: NorthernL1ghts
+#+description: A parser for Aly based on tree sitter.
+#+created: <2025-04-17 Thursday>
+
+** Build =libtree-sitter-int= Shared Object
+
+- A C compiler (we like [[https://gcc.gnu.org/][GCC]])
+- [[https://cmake.org/download/][CMake]] [optional]
+
+A CMake build script is pre-provided; use that to generate a build
+system, then invoke it.
+#+begin_src sh
+  cmake -B bld
+  cmake --build bld
+#+end_src
+
+This will compile and link a shared library =tree-sitter-int= within the
+=bld= subdirectory. It is recommended to copy it into
+=~/.tree_sitter/bin= or alike. For the tree-sitter CLI to look in the
+right place, alter =parser-directories= in =~/tree-sitter/config.json=. See [[https://tree-sitter.github.io/tree-sitter/syntax-highlighting#per-user-configuration][official docs]] for more info.
+
+Alternatively, use a compiler (and lots of flags) to build it. Make
+sure to change the output file name to the proper extension based on
+your platform.
+
+#+begin_src sh
+  gcc -O3 -march=native src/parser.c -shared -flto -fPIC -o tree-sitter-int.so -lm -lpthread -Wall -Wextra
+#+end_src
+
+** Generate Parser from =grammar.js= *optional
+
+- [[https://tree-sitter.github.io/tree-sitter/creating-parsers#installation][tree-sitter CLI]]
+
+NOTE: Only one of the following needs to be completed.
+
+*** Node.js
+
+#+begin_src sh
+  npm install
+  npx tree-sitter generate
+#+end_src
+
+*** Cargo
+
+NOTE: Assuming you've built tree-sitter from source using =Cargo= and have successfully installed the CLI executable somewhere in your PATH environment variable, you can now just generate the grammar.
+
+#+begin_src sh
+  tree-sitter generate
+#+end_src
+
+*** What now?
+
+Now that you have successfully generated the parser, the =src= directory has been populated with =C= source code representing the grammar, which can be built into a shared library and used by many different programs. See instructions above on building the shared object.
+
+** How to Use in Emacs 29/30+
+
+NOTE: Emacs changes every day, so the info here may be out of date.
+Consult the documentation within Emacs for best results.
+
+If ~tree-sitter-major-mode-language-alist~ is *not* nil, as in you
+have set it to another value and would like to retain it, use
+~(add-to-list 'tree-sitter-major-mode-language-alist '(int-mode . int))~,
+and don't forget to also do this with ~int-ts-mode~.
+
+#+begin_src elisp
+  (setq tree-sitter-major-mode-language-alist '((int-mode . int) (int-ts-mode . int)))
+#+end_src
+
+Then use tree-sitter as you would normally. Try
+=M-x tree-sitter-query-builder= while in a int-mode buffer!
+
+*** Emacs 30+
+
+Also run the one above for older versions if you would like the old
+tree-sitter API to work (i.e. ~tree-sitter-query-builder~), as the
+legacy tree-sitter functions are still included.
+
+If ~treesit-extra-load-path~ is *not* nil, as in you have set it to
+another value and would like to retain it, use
+~(add-to-list 'treesit-extra-load-path "path/to/here/bld")~.
+
+Otherwise, if this is the only extra load path needed, use ~setq~.
+
+#+begin_src elisp
+  (setq treesit-extra-load-path '("path/to/here/bld"))
+#+end_src
+
+Then navigate to a buffer containing Aly source code and try
+~treesit-explore-mode~. When it asks for a language, input ~int~ (short
+for =Aly=). A new buffer will open containing the AST for the
+contents of the buffer---or, at least, the grammar's current best
+approximation of it. You can even navigate through it, highlight
+different portions, etc. Very educational!
+
+In the Aly repository, you will find a =int-ts-mode.el= in the
+editor subdirectory which can be loaded and subsequently used for
+tree-sitter based syntax highlighting.
