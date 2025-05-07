@@ -1,5 +1,5 @@
 module.exports = grammar({
-    name: "int",
+    name: "aly",
 
     conflicts: $ => [
         [$.expr_lambda, $._type_derived],

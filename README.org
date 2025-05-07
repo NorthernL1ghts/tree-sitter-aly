@@ -3,7 +3,7 @@
 #+description: A parser for Aly based on tree sitter.
 #+created: <2025-04-17 Thursday>
 
-** Build =libtree-sitter-int= Shared Object
+** Build =libtree-sitter-aly= Shared Object
 
 - A C compiler (we like [[https://gcc.gnu.org/][GCC]])
 - [[https://cmake.org/download/][CMake]] [optional]
@@ -15,7 +15,7 @@ system, then invoke it.
   cmake --build bld
 #+end_src
 
-This will compile and link a shared library =tree-sitter-int= within the
+This will compile and link a shared library =tree-sitter-aly= within the
 =bld= subdirectory. It is recommended to copy it into
 =~/.tree_sitter/bin= or alike. For the tree-sitter CLI to look in the
 right place, alter =parser-directories= in =~/tree-sitter/config.json=. See [[https://tree-sitter.github.io/tree-sitter/syntax-highlighting#per-user-configuration][official docs]] for more info.
@@ -25,7 +25,7 @@ sure to change the output file name to the proper extension based on
 your platform.
 
 #+begin_src sh
-  gcc -O3 -march=native src/parser.c -shared -flto -fPIC -o tree-sitter-int.so -lm -lpthread -Wall -Wextra
+  gcc -O3 -march=native src/parser.c -shared -flto -fPIC -o tree-sitter-aly.so -lm -lpthread -Wall -Wextra
 #+end_src
 
 ** Generate Parser from =grammar.js= *optional
